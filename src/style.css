@@ -34,7 +34,7 @@ body {
     border-radius: 5px;
   }
   ol {
-    font-size: 30px;
+    font-size: 25px;
     
   }
   
@@ -68,4 +68,15 @@ body {
    margin: 0 5%;
 
   }
-  
+  a {
+    text-decoration: none;
+  }
+  ol .active {
+    color: black;
+    cursor: default;
+    text-decoration: none;
+  }
+  .active:hover {
+    text-decoration: none;
+    color: black;
+  }

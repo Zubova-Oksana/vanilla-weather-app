@@ -75,8 +75,9 @@ function formatDate(timestamp) {
       console.log(response.data.dt * 1000)
       let temperature = document.querySelector("#temp");
       let currentTemp = Math.round(response.data.main.temp);
+      console.log(response.data.main.temp);
+      celsiusTemperature = response.data.main.temp;
       temperature.innerHTML = currentTemp;
-    
       let humidity = document.querySelector("#humidity");
       let currentHumidity = Math.round(response.data.main.humidity);
       humidity.innerHTML = currentHumidity;
@@ -99,3 +100,27 @@ function formatDate(timestamp) {
       "alt", response.data.weather[0].description);
   
     }
+    
+    function displayFahrenheitTemperature(event) {
+      event.preventDefault();
+      let temperatureElement = document.querySelector("#temp");
+      celsiusLink.classList.remove("active");
+      fahrenheitLink.classList.add("active");
+      let fahrenheiTemperature = (celsiusTemperature*9)/5+32;
+      temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
+    }
+
+    function displayCelsiusTemperature(event) {
+      event.preventDefault();
+      fahrenheitLink.classList.remove("active");
+      celsiusLink.classList.add("active");
+      let temperatureElement = document.querySelector("#temp");
+      temperatureElement.innerHTML = Math.round(celsiusTemperature);
+    }
+    let celsiusTemperature = null;
+    let fahrenheitLink = document.querySelector("#fahrenheit");
+    fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+    let celsiusLink = document.querySelector("#celsius-link");
+    celsiusLink.addEventListener("click", displayCelsiusTemperature);
+    
