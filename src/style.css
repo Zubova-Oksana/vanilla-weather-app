@@ -62,8 +62,9 @@ body {
     color: #33b0f9
   }
   
-  .image {
-    width: 200px;
+  #icon {
+    width: 180px;
+   
    float: right;
    margin: 0 5%;
 
@@ -81,5 +82,13 @@ body {
     color: black;
   }
   .forecast {
-    margin-top: 30px;
+    margin-top: 20px;
+  }
+
+  .weather-forecast-date {
+    text-align: center;
+  }
+
+  .card-text {
+    text-align: center;
   }

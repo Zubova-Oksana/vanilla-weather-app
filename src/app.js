@@ -101,6 +101,28 @@ function formatDate(timestamp) {
   
     }
     
+    function displayForecast() {
+      let forecastElement = document.querySelector("#forecast");
+      let forecastHTML = `<div class="row">`;
+      let days = ["Thu", "Fri", "Sat", "Sun"];
+      
+      days.forEach(function(day) {
+      
+      forecastHTML = forecastHTML + 
+      `
+      <div class="col-3"> 
+              
+                <div class="weather-forecast-date">${day}</div>
+                  
+                  <img src="src/images/cloud.png" class="card-img-top" alt="cloudy" />
+                  <p class="card-text">
+                    <span class="forecast-max"> +18°</span>      <span class="forecast-min">+16°</span></p>
+                </div>            
+            `;
+      })
+      forecastElement.innerHTML = forecastHTML
+    }
+
     function displayFahrenheitTemperature(event) {
       event.preventDefault();
       let temperatureElement = document.querySelector("#temp");
@@ -118,6 +140,9 @@ function formatDate(timestamp) {
       temperatureElement.innerHTML = Math.round(celsiusTemperature);
     }
     let celsiusTemperature = null;
+
+    displayForecast();
+
     let fahrenheitLink = document.querySelector("#fahrenheit");
     fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
