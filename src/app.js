@@ -43,7 +43,7 @@ function formatDate(timestamp) {
     function formatDay(timestamp) {
       let date = new Date(timestamp * 1000);
       let day = date.getDay();
-      let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+      let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
       return days[day];
     }
@@ -148,9 +148,7 @@ function formatDate(timestamp) {
       getForecast(response.data.coord)
     }
     
-    
-
-    function displayFahrenheitTemperature(event) {
+    /*function displayFahrenheitTemperature(event) {
       event.preventDefault();
       let temperatureElement = document.querySelector("#temp");
       celsiusLink.classList.remove("active");
@@ -167,13 +165,13 @@ function formatDate(timestamp) {
       temperatureElement.innerHTML = Math.round(celsiusTemperature);
     }
     let celsiusTemperature = null;
-    /*displayForecast();*/
+    /*displayForecast();
     
 
     let fahrenheitLink = document.querySelector("#fahrenheit");
     fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
     let celsiusLink = document.querySelector("#celsius-link");
-    celsiusLink.addEventListener("click", displayCelsiusTemperature);
+    celsiusLink.addEventListener("click", displayCelsiusTemperature);*/
     
     setCity("Kharkiv");

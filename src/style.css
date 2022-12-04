@@ -92,3 +92,21 @@ body {
   .card-text {
     text-align: center;
   }
+
+  .weather-forecast-date {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #33b0f9;
+    font-size: x-large;
+    font-weight: bold;
+  }
+
+  .card-text {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    word-spacing: 15px;
+    font-size: x-large;
+    font-weight: bold;
+  }
+  p {
+   text-align: center;
+   margin-bottom: 0px;
+  }
