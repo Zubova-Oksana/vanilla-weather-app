@@ -18,13 +18,13 @@ function formatDate(timestamp) {
     let todayMonth = months[now.getMonth()];
     
     let weeks = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
+      "Неділя",
+      "Понеділок",
+      "Вівторок",
+      "Середа",
+      "Четвер",
+      "П'ятниця",
+      "Субота"
     ];
     let todayWeek = weeks[now.getDay()];
     
@@ -43,7 +43,7 @@ function formatDate(timestamp) {
     function formatDay(timestamp) {
       let date = new Date(timestamp * 1000);
       let day = date.getDay();
-      let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+      let days = ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"]
 
       return days[day];
     }
@@ -174,4 +174,4 @@ function formatDate(timestamp) {
     let celsiusLink = document.querySelector("#celsius-link");
     celsiusLink.addEventListener("click", displayCelsiusTemperature);*/
     
-    setCity("Kharkiv");
+    setCity("Kyiv");
